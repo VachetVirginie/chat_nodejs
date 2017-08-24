@@ -1,0 +1,19 @@
+{
+    "name": "super-chat",
+    "version": "0.0.1",
+    "dependencies": {
+        "ent": "^0.1.0",
+        "express": "^3.21.2",
+        "fs": "0.0.1-security",
+        "http": "0.0.0",
+        "socket.io": "^1.7.4"
+    },
+    "author": "vivvi",
+    "description": "Un super Chat temps réel avec socket.io",
+    "main": "app.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "license": "MIT"
+}
