@@ -15,6 +15,7 @@ io.sockets.on('connection', function(socket, pseudo) {
         pseudo = ent.encode(pseudo);
         socket.pseudo = pseudo;
         socket.broadcast.emit('nouveau_client', pseudo);
+
     });
 
     // Dès qu'on reçoit un message, on récupère le pseudo de son auteur et on le transmet aux autres personnes
@@ -22,6 +23,9 @@ io.sockets.on('connection', function(socket, pseudo) {
         message = ent.encode(message);
         socket.broadcast.emit('message', { pseudo: socket.pseudo, message: message });
     });
+    socket.on('disconnect', function() {
+        console.log('user disconnect');
+    });
 });
 
-server.listen(8081);
+server.listen(3007);
